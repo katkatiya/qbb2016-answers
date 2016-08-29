@@ -1,0 +1,21 @@
+  501  ls -a
+  510  cp SRR072893.fastq.gz ~/qbb2016-answers/day1-hmwk/
+  515  cdgit
+  517  cd day1-hmwk/
+  519  ls
+  521  gunzip SRR072893.fastq.gz 
+	fastqc -h
+	fastqc S<tab>
+  527  ls
+
+	cp *.ht2 ~/qbb(tab)/d(tab)h(tab)
+	cdgit
+	cd day1-hmwk
+
+
+  542  ls
+  549  hisat2 -p 4 -x BDGP6 -U SRR072893.fastq -S hiresults.sam
+	samtools sort -@ 4 hi results.sam -o samsorted.bam
+	samtools index samsortedbam
+
+  562  stringtie samsorted.bam -G ~/data/BDGP6/BDGP6.Ensembl.85.gtf -o ~/qbb2016-answers/day1-hmwk/finished.gtf -p 4 -B
