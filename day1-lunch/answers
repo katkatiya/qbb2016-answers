@@ -157,3 +157,6 @@ Now onto the advanced problems
 3R	-	2554127	2554398	271
 3R	-	2554124	2554126	2
 awk '{print  t  t  t  t - }' BDGP6.Ensembl.85.gtf | head -n 100 >> ~/qbb2016-answers/day1-lunch/answers
+4785235
+100
+47852.3
