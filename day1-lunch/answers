@@ -18,3 +18,5 @@ cagaacagatatttagattgcctctcattttctctcccatattatagggagaaatatgat
 3R	FlyBase	exon	722370	722621	.	-	.	gene_id "FBgn0085804"; transcript_id "FBtr0114258"; exon_number "1"; gene_name "CR41571"; gene_source "FlyBase"; gene_biotype "pseudogene"; transcript_name "CR41571-RA"; transcript_source "FlyBase"; transcript_biotype "pseudogene"; exon_id "FBtr0114258-E1";
 3R	FlyBase	gene	835381	2503907	.	+	.	gene_id "FBgn0267431"; gene_name "CG45784"; gene_source "FlyBase"; gene_biotype "protein_coding";
 3R	FlyBase	transcript	835381	2503907	.	+	.	gene_id "FBgn0267431"; transcript_id "FBtr0346770"; gene_name "CG45784"; gene_source "FlyBase"; gene_biotype "protein_coding"; transcript_name "CG45784-RA"; transcript_source "FlyBase"; transcript_biotype "protein_coding";
+wc -l BDGP6.Ensembl.85.gtf >> /Users/cmbd/qbb2016-answers/day1-lunch/answers
+  538689 BDGP6.Ensembl.85.gtf
