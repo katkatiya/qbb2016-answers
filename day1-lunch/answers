@@ -20,3 +20,6 @@ cagaacagatatttagattgcctctcattttctctcccatattatagggagaaatatgat
 3R	FlyBase	transcript	835381	2503907	.	+	.	gene_id "FBgn0267431"; transcript_id "FBtr0346770"; gene_name "CG45784"; gene_source "FlyBase"; gene_biotype "protein_coding"; transcript_name "CG45784-RA"; transcript_source "FlyBase"; transcript_biotype "protein_coding";
 wc -l BDGP6.Ensembl.85.gtf >> /Users/cmbd/qbb2016-answers/day1-lunch/answers
   538689 BDGP6.Ensembl.85.gtf
+     514
+       1
+grep -e Sxl BDGP6.Ensembl.85.gtf | wc -l >> ~/qbb2016-answers/day1-lunch/answers
