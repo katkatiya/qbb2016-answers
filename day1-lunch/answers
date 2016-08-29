@@ -38,3 +38,19 @@ stop_codon
 three_prime_utr
 transcript
 cut -f 3 BDGP6.Ensembl.85.gtf | sort | uniq >> ~/qbb2016-answers/day1-lunch/answers
+ 
+   1 #!genebuild-last-updated 2014-09
+   1 #!genome-build BDGP6
+   1 #!genome-build-accession NCBI:GCA_000001215.4
+   1 #!genome-date 2014-07
+   1 #!genome-version BDGP6
+160188 CDS
+   4 Selenocysteine
+186414 exon
+46060 five_prime_utr
+17559 gene
+30389 start_codon
+30296 stop_codon
+33034 three_prime_utr
+34740 transcript
+cut -f 3 BDGP6.Ensembl.85.gtf | sort | uniq -c >> ~/qbb2016-answers/day1-lunch/answers
