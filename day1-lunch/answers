@@ -23,3 +23,18 @@ wc -l BDGP6.Ensembl.85.gtf >> /Users/cmbd/qbb2016-answers/day1-lunch/answers
      514
        1
 grep -e Sxl BDGP6.Ensembl.85.gtf | wc -l >> ~/qbb2016-answers/day1-lunch/answers
+#!genebuild-last-updated 2014-09
+#!genome-build BDGP6
+#!genome-build-accession NCBI:GCA_000001215.4
+#!genome-date 2014-07
+#!genome-version BDGP6
+CDS
+Selenocysteine
+exon
+five_prime_utr
+gene
+start_codon
+stop_codon
+three_prime_utr
+transcript
+cut -f 3 BDGP6.Ensembl.85.gtf | sort | uniq >> ~/qbb2016-answers/day1-lunch/answers
