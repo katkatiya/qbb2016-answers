@@ -1,9 +1,0 @@
-  591  mate day2-excercise2.py 
-  593  chmod +x day2-excercise2.py 
-  596  ./day2-excercise2.py 
-  601  ./day2-excercise2.py < ~/qbb2016-answers/day1-hmwk/hiresults.sam 
-  610  ./day2-excercise2.py < ~/qbb2016-answers/day1-hmwk/hiresults.sam > day2-excercise2.txt
-  617  grep -v "@" ~/qbb2016-answers/day1-hmwk/hiresults.sam |head -50 > dummysam.sam
-  628  less -S dummysam.sam
-  636  ./day2-excercise2.py < ~/qbb2016-answers/day1-hmwk/hiresults.sam >> day2-excercise2.txt 
-  643  ./day2-excercise2.py < ~/qbb2016-answers/day1-hmwk/hiresults.sam
