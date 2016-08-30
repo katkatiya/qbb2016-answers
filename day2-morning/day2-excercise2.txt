@@ -1,0 +1,23 @@
+1.	22143019	total alignments
+2.	0		no perfect matches if you use HO:i (includes clipping)
+3.	17040711	map exactly to one loc
+
+4. print the chromosome of the first 10 alignments
+
+X
+3R
+2R
+2L
+2R
+4
+3L
+3L
+3L
+3R
+‘done’
+
+5.	191		Average MapQ score for entire sam file hisamresults
+
+
+
+dropped questions 6 and 7 from basic exercise. 
