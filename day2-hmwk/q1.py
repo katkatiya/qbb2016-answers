@@ -10,7 +10,7 @@ import sys
 #download fly.txt and put in a working directory
 fly = "/Users/cmdb/qbb2016-answers/day2-hmwk/flybase.txt" #hardcode filepath for document of interest
 f= open(fly) # hardcoded not typically recommended, but only using this file.
-f2 = open('flygene_uniprot_mapper.txt','w') #open new .txt to save to
+f2 = open('flygene_uniprot_mapper.output','w') #open new .txt to save to
 
 for lines in f: #.readline:
     if lines.find( "DROME" ) != -1: #find DROME
@@ -19,7 +19,7 @@ for lines in f: #.readline:
             continue
         else:
             #print fields[3],fields[2]  #(suppressed) output to the command line 
-            f2.write(" %s \t %s \n" % (fields[3],fields[2])) #write to txt file
+            f2.write("%s\t%s\n" % (fields[3],fields[2])) #write to txt file
         
 
             
