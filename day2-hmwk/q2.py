@@ -22,20 +22,26 @@ fmap_dic={} #initialize dictionary
 #build dictionary from fmap file
 for line in fmap:
     field = line.rstrip('\r\n').split("\t")
-    fmap_dic[ field[0] ] = field[1] 
+    fmap_dic[  field[0] ] = field[1] 
     
     #for i in fmap_dic:
         #print i , fmap_dic[i]
         
-
-for i, genes in enumerate(ctab): #enumerate to stop output on 100 line
-
-    flyd = genes.rstrip("\r\n").split("\t")[8]
-    #print flyd #for debugging suppress
-    
+j=0
+for genes in ctab: #enumerate to stop output on 100 line
+    flyd = genes.rstrip('\r\n').split("\t")[8]
+    #print flyd #for debugging suppress    
+    if j ==100:
+        break
+        
     if flyd not in fmap_dic: #not mapping to dictionary. WHY AREN'T YOU MAPPING??!?!?
-        print "not here"
+        if out is 0:
+            continue
+        elif out is 1:
+            j+=1
+            print None
     else:
-        print "\t".join(flyd)+'\t'+fmap_dic[flyd]
+        print flyd +'\t'+ fmap_dic[flyd]
+        j+=1
 
         
