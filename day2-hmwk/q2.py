@@ -28,20 +28,29 @@ for line in fmap:
         #print i , fmap_dic[i]
         
 j=0
-for genes in ctab: #enumerate to stop output on 100 line
-    flyd = genes.rstrip('\r\n').split("\t")[8]
-    #print flyd #for debugging suppress    
-    if j ==100:
-        break
-        
-    if flyd not in fmap_dic: #not mapping to dictionary. WHY AREN'T YOU MAPPING??!?!?
-        if out is 0:
-            continue
-        elif out is 1:
+if out == "0":
+    for i, genes in enumerate(ctab): 
+        flyd = genes.rstrip('\r\n').split("\t")[8]
+        #print flyd #for debugging suppress    
+        if j ==100:
+            break
+      
+        if flyd in fmap_dic: #only print genes that map, ignore unmapped
+            print flyd +'\t'+ fmap_dic[flyd]
             j+=1
-            print None
-    else:
-        print flyd +'\t'+ fmap_dic[flyd]
-        j+=1
 
-        
+
+j=0    
+if out == "1":        
+    for i, genes in enumerate(ctab): 
+        flyd = genes.rstrip('\r\n').split("\t")[8]
+        #print flyd #for debugging suppress    
+        if j ==100:
+            break
+      
+        if flyd not in fmap_dic:   
+            print "not found"
+            j+=1
+        elif flyd in fmap_dic:
+            print flyd +'\t'+ fmap_dic[flyd]
+            j+=1
