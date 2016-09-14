@@ -14,11 +14,12 @@ quickly align multiple sequences (by amino acid) by fft.
 convert back to nucleic to compare homologs to query fasta.
 
 
-line plot y= ratio(dN/dS) by x= codon position.
+line plot y= ratio(dS/dN) by x= codon position.
 will tell you how conserved a domain is across homologs. 
+i.e. larger response in y == more highly conserved.
 
 
-usage: selectionscreen.py <query_aminoacids.fa> <aligned_aminoacids.fa>
+usage: <./aa_selectscreen.py>  <week1_query.fa>  <nuc_alignedhomologs.fa>
 """
 
 query = open(sys.argv[1])
@@ -58,73 +59,105 @@ aa_to_codon = {
 'xxx':'X'
 }
 
-score, score_all, dS, dN, dS_all, dN_all= [],[], [],[], [],[]
+score, score_all, dS, dN, dS_all, dN_all = [],[], [],[], [],[]
+hcodon, qcodon = [], []
+k=0 #nuc to codon counter
+
 #compare all homologs to query
 for line_h in homloggy:
     line_h = line_h.rstrip("\r\n")
     if line_h[0] == ">":
-        if score != []:
-            #skip first loop because nothing to append yet
-            if score_all == []: 
-                score_all = [score]
-                dS, dN = [dS],[dN]
-            else:
-                score = score[:-1]
-                dS,dN = dS[:-1],dN[:-1]
 
+        if dN != []:
+            #skip first loop because nothing to append yet
+            if dN_all == []: 
+                dS_all = [dS]
+                dN_all = [dN]
+            else:
                 dS_all.append(dS)
                 dN_all.append(dN)
-                #score_all.append(score)
 
             score, dS, dN = [],[],[]
         #print line_h
         continue
+        
     elif line_h == "":
         continue
+        
     else:
         if line_h[0] == ">":
             continue
-        print line_h
-        quit()
+        
         #cycle through query for each homolog
         for h,q in itertools.izip(line_h,itertools.cycle(qseq)):
-            if h == q:
-                score.append(1)
-                dS.append(1)
-                dN.append(0.1)
-            else:
-                score.append(-1)
-                dS.append(0.1)
-                dN.append(1)
-            #print h,q, score
+            #now to add dS or dN for each homolog. compare codons
+            k += 1
+            hcodon.append(h)
+            qcodon.append(q)
+            if k == 3:
+                hcodon = "".join(hcodon)
+                qcodon = "".join(qcodon)
+                if hcodon == qcodon:
+                    #No change append a zero to both lists
+                    dS.append(0)
+                    dN.append(0)
+                    #print "same"
+                    flag = 1
+                if hcodon == 'xxx':
+                    #cannot count it
+                    dS.append(0)
+                    dN.append(0)
+                    #print "xxx"
+                    flag = 1
+                if hcodon == '---':
+                    dS.append(0)
+                    dN.append(0)
+                    #print "---"
+                    flag = 1
+                if flag ==0 and aa_to_codon[hcodon] == aa_to_codon[qcodon]:
+                    dS.append(1)
+                    dN.append(0)
+                    #print aa_to_codon[hcodon] , aa_to_codon[qcodon]
+                elif flag ==0 and aa_to_codon[hcodon] != aa_to_codon[qcodon]:
+                    dS.append(0)
+                    dN.append(1)
+                    #print aa_to_codon[hcodon] , aa_to_codon[qcodon] #none of this?
+                
+                #reset for next comparison
+                flag=0
+                k=0
+                hcodon = []
+                qcodon = []
 
-"""hmmm if there's no change in the (same codon, same sequence)
-I shouldn't count that as a dS. Will change if I have time. onto graphing
-"""
 
-
-score_all[0].pop(-1)
+ 
+# score_all[0].pop(-1)
 dS = np.array(dS_all)
 dN = np.array(dN_all)
-dS_sum = np.sum(dS, axis=0)
-dN_sum = np.sum(dS, axis=0)
-#print dS_sum.shape, dN_sum.shape
-
-ratio = dN_sum / dS_sum #ratio of N/S non sycn to sycn selections.
+# print dS.shape, dN.shape
+# quit()
 
 
+dS_sum = np.sum(dS, axis=0)+1
+dN_sum = np.sum(dN, axis=0)+1
 
-#print mean_scores
+N = np.log10(dN_sum)
+S = np.log10(dS_sum)
+# N = dN_sum
+# S = dS_sum
+ratio = S - N #ratio of N/S non sycn to sycn selections.
+#print ratio
 
+plt.style.use('ggplot')
 plt.figure()
 plt.plot(ratio)
-plt.title("many lines?")
-plt.ylabel("Ratio dN/dS")
-plt.xlabel("hopefully aa position")
-plt.show()
+plt.title("Functional conservation of gene sequence across homologs ")
+plt.ylabel("Ratio dS/dN (log(dS)-log(dN))")
+plt.xlabel("Amino acid position")
+#plt.show()
 
-# plt.savefig("Rolling mean (size={}) for Chromosome {}.png".format(sys.argv[1],j))
-# plt.close()
+plt.savefig("Functional conservation of gene sequence across homologs.png")
+plt.close()
 
 
 
