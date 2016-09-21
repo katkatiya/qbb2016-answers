@@ -1,0 +1,213 @@
+/usr/local/Cellar/quast/4.2/quast.py -R reference.fasta ./spades/low/contigs.fasta ./spades/high/contigs.fasta ./velveth/low/contigs.fa ./velveth/high/contigs.fa
+
+Version: 4.2, build 21.07.2016 14:03
+
+System information:
+  OS: Darwin-15.6.0-x86_64-i386-64bit (macosx)
+  Python version: 2.7.12
+  CPUs number: 4
+
+Started: 2016-09-21 12:54:25
+
+Logging to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/quast.log
+NOTICE: Maximum number of threads is set to 1 (use --threads option to set it manually)
+
+Main parameters: 
+  Threads: 1, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  reference.fasta ==> reference
+
+Contigs:
+  1  ./spades/low/contigs.fasta ==> low_contigs
+  2  ./spades/high/contigs.fasta ==> high_contigs
+  3  ./velveth/low/contigs.fa ==> low_contigs 1
+  4  ./velveth/high/contigs.fa ==> high_contigs 1
+
+2016-09-21 12:54:30
+Running Basic statistics processor...
+  Reference genome:
+    reference.fasta, Reference length = 4639675, Reference GC % = 50.79
+  Contig files: 
+    1  low_contigs
+    2  high_contigs
+    3  low_contigs 1
+    4  high_contigs 1
+  Calculating N50 and L50...
+    1  low_contigs, N50 = 718, L50 = 8, Total length = 15922, GC % = 51.21, # N's per 100 kbp =  0.00
+    2  high_contigs, N50 = 100000, L50 = 1, Total length = 100000, GC % = 52.59, # N's per 100 kbp =  0.00
+    3  low_contigs 1, N50 = 632, L50 = 5, Total length = 7243, GC % = 50.71, # N's per 100 kbp =  0.00
+    4  high_contigs 1, N50 = 19911, L50 = 2, Total length = 99584, GC % = 52.58, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/coverage_histogram.pdf
+  Drawing low_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/low_contigs_coverage_histogram.pdf
+  Drawing high_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/high_contigs_coverage_histogram.pdf
+  Drawing low_contigs 1 coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/low_contigs 1_coverage_histogram.pdf
+  Drawing high_contigs 1 coverage histogram (bin size: 12x)...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/basic_stats/high_contigs 1_coverage_histogram.pdf
+Done.
+
+2016-09-21 12:54:34
+Running Contig analyzer...
+  1  low_contigs
+  1  Logging to files /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs.stdout and contigs_report_low_contigs.stderr...
+  1  Aligning contigs to the reference
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/low_contigs.fasta \
+     >> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs.stdout \
+     2>> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs.stderr
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.fdelta \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs.stderr
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.coords_tmp \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs.stderr
+  1  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.delta \
+     < quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.coords.headless \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs.all_snps \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs.stderr
+  1  Alignments: quast_results/results_2016_09_21_12_54_25/contigs_reports/alignments_low_contigs.tsv
+  1  Analysis is finished.
+
+  2  high_contigs
+  2  Logging to files /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs.stdout and contigs_report_high_contigs.stderr...
+  2  Aligning contigs to the reference
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/high_contigs.fasta \
+     >> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs.stdout \
+     2>> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs.stderr
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.fdelta \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs.stderr
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.coords_tmp \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs.stderr
+  2  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.delta \
+     < quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.coords.headless \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.all_snps \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs.stderr
+  2  Alignments: quast_results/results_2016_09_21_12_54_25/contigs_reports/alignments_high_contigs.tsv
+  2  Analysis is finished.
+
+  3  low_contigs_1
+  3  Logging to files /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs_1.stdout and contigs_report_low_contigs_1.stderr...
+  3  Aligning contigs to the reference
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1 \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/low_contigs_1.fa \
+     >> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs_1.stdout \
+     2>> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs_1.stderr
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.fdelta \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs_1.stderr
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.coords_tmp \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs_1.stderr
+  3  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.delta \
+     < quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.coords.headless \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/low_contigs_1.all_snps \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_low_contigs_1.stderr
+  3  Alignments: quast_results/results_2016_09_21_12_54_25/contigs_reports/alignments_low_contigs_1.tsv
+  3  Analysis is finished.
+
+  4  high_contigs_1
+  4  Logging to files /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs_1.stdout and contigs_report_high_contigs_1.stderr...
+  4  Aligning contigs to the reference
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/nucmer -c 65 -l 65 --maxmatch \
+     -p quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1 \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/reference.fasta \
+     quast_results/results_2016_09_21_12_54_25/quast_corrected_input/high_contigs_1.fa \
+     >> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs_1.stdout \
+     2>> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs_1.stderr
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/delta-filter -i 95.0 -l 0 quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.fdelta \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs_1.stderr
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-coords quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.delta \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.coords_tmp \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs_1.stderr
+  4  /usr/local/Cellar/quast/4.2/libs/MUMmer3.23-osx/show-snps -S -T -H quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.delta \
+     < quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.coords.headless \
+     > quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs_1.all_snps \
+     2> quast_results/results_2016_09_21_12_54_25/contigs_reports/contigs_report_high_contigs_1.stderr
+  4  Alignments: quast_results/results_2016_09_21_12_54_25/contigs_reports/alignments_high_contigs_1.tsv
+  4  Analysis is finished.
+
+  Creating total report...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2016-09-21 12:54:55
+Running NA-NGA calculation...
+  1  low_contigs, Largest alignment = 1737, NA50 = 715, LA50 = 8
+  2  high_contigs, Largest alignment = 100000, NA50 = 100000, LA50 = 1
+  3  low_contigs 1, Largest alignment = 998, NA50 = 632, LA50 = 5
+  4  high_contigs 1, Largest alignment = 33235, NA50 = 19911, LA50 = 2
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/aligned_stats/NGAx_plot.pdf
+Done.
+
+2016-09-21 12:54:57
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  low_contigs
+  1  Analysis is finished.
+  2  high_contigs
+  2  Analysis is finished.
+  3  low_contigs_1
+  3  Analysis is finished.
+  4  high_contigs_1
+  4  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2016-09-21 12:55:01
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2016-09-21 12:55:05
+RESULTS:
+  Text versions of total report are saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/report.html
+  PDF version (tables and plots) is saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/report.pdf
+  Icarus (contig browser) is saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/icarus.html
+  Log saved to /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/quast.log
+
+Finished: 2016-09-21 12:55:05
+Elapsed time: 0:00:39.170842
+NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

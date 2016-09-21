@@ -1,0 +1,17 @@
+reference chromosomes:
+	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ (total length: 4639675 bp, maximal covered length: 100000 bp)
+
+total genome size: 4639675
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+low_contigs              | 0.34317%  | 1.00000     | 22        | -         | -         | -         | -         |
+high_contigs             | 2.15532%  | 1.00000     | 1         | -         | -         | -         | -         |
+low_contigs_1            | 0.15611%  | 1.00000     | 12        | -         | -         | -         | -         |
+high_contigs_1           | 2.14461%  | 1.00081     | 3         | -         | -         | -         | -         |

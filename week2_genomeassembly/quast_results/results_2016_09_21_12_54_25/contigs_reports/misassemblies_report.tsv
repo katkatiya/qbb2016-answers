@@ -1,0 +1,13 @@
+Assembly	low_contigs	high_contigs	low_contigs 1	high_contigs 1
+# misassemblies	1	0	0	0
+    # relocations	1	0	0	0
+    # translocations	0	0	0	0
+    # inversions	0	0	0	0
+# misassembled contigs	1	0	0	0
+Misassembled contigs length	1084	0	0	0
+# local misassemblies	0	0	0	0
+# mismatches	5	0	0	0
+# indels	0	0	0	0
+    # short indels	0	0	0	0
+    # long indels	0	0	0	0
+Indels length	0	0	0	0

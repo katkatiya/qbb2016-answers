@@ -1,0 +1,66 @@
+Aligning contigs to reference...
+	Aligning contigs to the reference 
+Parsing coords...
+Loading reference...
+	Loaded [U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_]
+Loading SNPs...
+	Total Regions: 1
+	Total Region Length: 4639675
+Analyzing contigs...
+CONTIG: NODE_1_length_100000_cov_225.046 (100000bp)
+Top Length: 100000  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  2512285 2513649 | 15377 16741 | 1365 1365 | 99.71 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+			Skipping alignment  607219 608585 | 15376 16742 | 1367 1367 | 99.56 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+			Skipping alignment  3581450 3582218 | 20564 19796 | 769 769 | 100.0 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+			Skipping alignment  1976527 1977294 | 19796 20563 | 768 768 | 100.0 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+			Skipping alignment  278387 279154 | 19796 20563 | 768 768 | 98.83 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+			Skipping alignment  289858 290625 | 19796 20563 | 768 768 | 98.83 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+			Skipping alignment  1049001 1049768 | 20563 19796 | 768 768 | 98.83 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+		One align captures most of this contig: 1 100000 | 1 100000 | 100000 100000 | 100.0 | U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_ NODE_1_length_100000_cov_225.046
+
+Analyzing coverage...
+Writing SNPs into /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.used_snps
+	Reference U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_: 1 total alignments. 1 total regions.
+		Region: 1 to 4639675 (4639675 bp)
+			Align 1: 1 100000 NODE_1_length_100000_cov_225.046 1 100000
+			END in gap: 100000 to 4639675 (4539675 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Users/cmdb/qbb2016-answers/week2_genomeassembly/quast_results/results_2016_09_21_12_54_25/contigs_reports/nucmer_output/high_contigs.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 0 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 100000
+
+	SNPs: 0
+	Insertions: 0
+	Deletions: 0
+
+	Positive Gaps: 1
+		Internal Gaps:  0
+		External Gaps:  1
+		External Gap Total:  4539675
+		External Gap Average: 4539675
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

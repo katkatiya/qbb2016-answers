@@ -1,0 +1,23 @@
+S1	E1	S2	E2	Reference	Contig	IDY	Ambiguous	Best_group
+8474	9015	542	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_9_length_512_cov_2.654297	100.0		True
+CONTIG	NODE_9_length_512_cov_2.654297	542	correct
+77926	78604	679	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_10_length_649_cov_3.714946	100.0		True
+CONTIG	NODE_10_length_649_cov_3.714946	679	correct
+61790	62787	998	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_12_length_968_cov_1.780992	100.0		True
+CONTIG	NODE_12_length_968_cov_1.780992	998	correct
+2512285	2513260	1	976	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_28_length_946_cov_2.979915	100.0		True
+CONTIG	NODE_28_length_946_cov_2.979915	976	correct
+19805	20436	632	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_36_length_602_cov_7.767442	100.0		True
+CONTIG	NODE_36_length_602_cov_7.767442	632	correct
+88623	89198	576	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_44_length_546_cov_2.564103	100.0		True
+CONTIG	NODE_44_length_546_cov_2.564103	576	correct
+17116	17646	531	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_57_length_501_cov_1.762475	100.0		True
+CONTIG	NODE_57_length_501_cov_1.762475	531	correct
+19144	19664	521	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_76_length_491_cov_2.405295	100.0		True
+CONTIG	NODE_76_length_491_cov_2.405295	521	correct
+37408	38096	689	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_99_length_659_cov_2.280728	100.0		True
+CONTIG	NODE_99_length_659_cov_2.280728	689	correct
+63016	63525	510	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_130_length_480_cov_2.275000	100.0		True
+CONTIG	NODE_130_length_480_cov_2.275000	510	correct
+55754	56342	589	1	U00096.2__Escherichia_coli_K-12_MG1655_complete_genome__4639675_bp_	NODE_151_length_559_cov_3.220036	100.0		True
+CONTIG	NODE_151_length_559_cov_3.220036	589	correct
