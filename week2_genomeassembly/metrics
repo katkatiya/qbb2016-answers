@@ -1,0 +1,8 @@
+<open file '/Users/cmdb/qbb2016-answers/week2_genomeassembly/spades/low/contigs.fasta', mode 'r' at 0x10bf21390>
+ min: 207 max: 1737 average: 389 n50: 372
+<open file '/Users/cmdb/qbb2016-answers/week2_genomeassembly/spades/high/contigs.fasta', mode 'r' at 0x10e0f3390>
+ min: 100000 max: 100000 average: 100000 n50: 100000
+<open file '/Users/cmdb/qbb2016-answers/week2_genomeassembly/velveth/low/contigs.fa', mode 'r' at 0x10911e390>
+ min: 61 max: 998 average: 186 n50: 248
+<open file '/Users/cmdb/qbb2016-answers/week2_genomeassembly/velveth/high/contigs.fa', mode 'r' at 0x10f00b390>
+ min: 61 max: 33235 average: 6269 n50: 19911
