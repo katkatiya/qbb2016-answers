@@ -57,9 +57,9 @@ yayctcf[np.isnan(yayctcf)] = -np.inf
 test = np.amax(yayctcf, axis=0)
 test2= np.argmax(yayctcf, axis=0)
 
-print yayctcf
+print yayctcf #print to txt file
 #print test
-print test2
+#print test2
 
 #need to skip over nan values 
  
